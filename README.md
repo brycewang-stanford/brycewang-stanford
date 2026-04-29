@@ -1,7 +1,7 @@
 # Bryce Wang · 王几行 XING
 
 > **Building agent-native infrastructure for empirical research.**
-> Data Scientist @ China Center for Economic and Institutional Research (Stanford)
+> Data Scientist @ Stanford REAP
 
 🏗️ **Now shipping →**
 &nbsp;&nbsp;&nbsp;&nbsp;`StatsPAI` — the agent-native Python package for causal inference
