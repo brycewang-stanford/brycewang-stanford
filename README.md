@@ -14,7 +14,7 @@
 
 ## 🏗️ What I'm Building
 
-### [StatsPAI](https://github.com/brycewang-stanford/StatsPAI) · `v1.8.0` · 121⭐
+### [StatsPAI](https://github.com/brycewang-stanford/StatsPAI) · `v1.9.0` · 121⭐
 
 **The agent-native Python package for causal inference & econometrics.**
 800+ functions across DiD, IV, RD, synthetic control, DML, and causal discovery — unified `.summary()`, `.plot()`, `.to_latex()` API. Brings R's *Causal Inference Task View* and Stata's core econometrics into a single, consistent Python toolkit.
