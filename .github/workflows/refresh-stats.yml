@@ -3,7 +3,7 @@ name: Refresh README stats
 on:
   schedule:
     # Every Monday at 12:00 UTC (≈ 05:00 PST / 20:00 CST)
-    - cron: '0 12 * * 1'
+    - cron: '0 12 * * *'
   workflow_dispatch: {}
 
 permissions:
