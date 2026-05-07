@@ -22,6 +22,23 @@
 
 <table>
   <tr>
+    <td width="100%" colspan="2" valign="top">
+      <h3><a href="https://github.com/brycewang-stanford/stata-code">stata-code</a></h3>
+      <p>
+        <a href="https://github.com/brycewang-stanford/stata-code"><img alt="stata-code stars" src="https://img.shields.io/github/stars/brycewang-stanford/stata-code?style=for-the-badge&logo=github&label=stars&color=8C1515"></a>
+        <img alt="PyPI" src="https://img.shields.io/pypi/v/stata-code?style=for-the-badge&label=PyPI&color=0EA5E9">
+        <img alt="Focus project" src="https://img.shields.io/badge/focus-project-22C55E?style=for-the-badge">
+      </p>
+      <p><strong>Agent-native Stata bridge: one Python core, multiple frontends.</strong></p>
+      <ul>
+        <li>Drive Stata from LLM agents, MCP clients, and Jupyter notebooks</li>
+        <li>Stable v1.0 result schema with typed errors, refs, and structured returns</li>
+        <li>MIT-licensed bridge for Stata 17+ and Python 3.10+</li>
+      </ul>
+      <pre><code>pip install stata-code</code></pre>
+    </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/brycewang-stanford/StatsPAI">StatsPAI</a></h3>
       <p>
