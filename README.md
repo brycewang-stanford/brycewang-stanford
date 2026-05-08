@@ -13,7 +13,7 @@
 <p>
   <img alt="Stanford REAP" src="https://img.shields.io/badge/Stanford%20REAP-Data%20Scientist-8C1515?style=flat-square">
   <img alt="Agent-native research" src="https://img.shields.io/badge/focus-agent--native%20research-0EA5E9?style=flat-square">
-  <img alt="Causal inference" src="https://img.shields.io/badge/domain-causal%20inference-F59E0B?style=flat-square">
+  <img alt="Causal inference/Agentic AI" src="https://img.shields.io/badge/domain-causal%20inference-F59E0B?style=flat-square">
 </p>
 
 </div>
