@@ -54,9 +54,9 @@
       <pre><code>pip install statspai</code></pre>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/brycewang-stanford/Awesome-Agent-Skills-for-Empirical-Research">Awesome Agent Skills</a></h3>
+      <h3><a href="https://github.com/brycewang-stanford/Empirical-Research-Skills">Empirical Research Skills</a></h3>
       <p>
-        <a href="https://github.com/brycewang-stanford/Awesome-Agent-Skills-for-Empirical-Research"><img alt="Awesome Agent Skills stars" src="https://img.shields.io/github/stars/brycewang-stanford/Awesome-Agent-Skills-for-Empirical-Research?style=for-the-badge&logo=github&label=stars&color=F59E0B"></a>
+        <a href="https://github.com/brycewang-stanford/Empirical-Research-Skills"><img alt="Empirical Research Skills stars" src="https://img.shields.io/github/stars/brycewang-stanford/Empirical-Research-Skills?style=for-the-badge&logo=github&label=stars&color=F59E0B"></a>
         <img alt="Skills" src="https://img.shields.io/badge/skills-23%2C000%2B-22C55E?style=for-the-badge">
       </p>
       <p><strong>Curated skill library for empirical research agents.</strong></p>
