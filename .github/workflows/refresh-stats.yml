@@ -1,10 +1,9 @@
-name: Refresh README stats
+name: Refresh repo stats
 
 on:
   schedule:
-    # Every Monday at 12:00 UTC (≈ 05:00 PST / 20:00 CST)
-    - cron: '0 12 * * *'
-  workflow_dispatch: {}
+    - cron: "0 6 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,76 +15,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch live stats from GitHub API
-        id: stats
+      - name: Bake star/fork counts into README
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/refresh_stats.py
+
+      - name: Commit if changed
         run: |
-          set -euo pipefail
-
-          STATSPAI_STARS=$(gh api repos/brycewang-stanford/StatsPAI --jq '.stargazers_count')
-          STATSPAI_VERSION=$(gh api repos/brycewang-stanford/StatsPAI/releases/latest --jq '.tag_name' 2>/dev/null || echo "")
-          AWESOME_STARS=$(gh api repos/brycewang-stanford/Awesome-Agent-Skills-for-Empirical-Research --jq '.stargazers_count')
-
-          echo "statspai_stars=$STATSPAI_STARS"     >> "$GITHUB_OUTPUT"
-          echo "statspai_version=$STATSPAI_VERSION" >> "$GITHUB_OUTPUT"
-          echo "awesome_stars=$AWESOME_STARS"       >> "$GITHUB_OUTPUT"
-
-          echo "── Live data ──"
-          echo "StatsPAI : ${STATSPAI_VERSION:-<no-release>} · ${STATSPAI_STARS} stars"
-          echo "Awesome  : ${AWESOME_STARS} stars"
-
-      - name: Patch README.md
-        env:
-          STATSPAI_STARS:   ${{ steps.stats.outputs.statspai_stars }}
-          STATSPAI_VERSION: ${{ steps.stats.outputs.statspai_version }}
-          AWESOME_STARS:    ${{ steps.stats.outputs.awesome_stars }}
-        run: |
-          python3 <<'PY'
-          import os, re, sys, pathlib
-
-          path = pathlib.Path('README.md')
-          src = path.read_text(encoding='utf-8')
-          out = src
-
-          version = os.environ['STATSPAI_VERSION']
-          statspai_stars = os.environ['STATSPAI_STARS']
-          awesome_stars  = os.environ['AWESOME_STARS']
-
-          # StatsPAI line:  · `vX.Y.Z` · NNN⭐
-          if version:
-              out = re.sub(
-                  r'(\[StatsPAI\]\([^)]+\) · `)v[\d.]+(` · )\d+(⭐)',
-                  rf'\g<1>{version}\g<2>{statspai_stars}\g<3>',
-                  out,
-                  count=1,
-              )
-
-          # Awesome-Agent-Skills line:  · NNN⭐
-          out = re.sub(
-              r'(\[Awesome-Agent-Skills\]\([^)]+\) · )\d+(⭐)',
-              rf'\g<1>{awesome_stars}\g<2>',
-              out,
-              count=1,
-          )
-
-          if out == src:
-              print('No changes needed — README already up to date.')
-              sys.exit(0)
-
-          path.write_text(out, encoding='utf-8')
-          print('README.md patched.')
-          PY
-
-      - name: Commit and push if changed
-        run: |
-          if git diff --quiet README.md; then
-            echo "No changes to commit."
-            exit 0
-          fi
-
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "chore: refresh README stats [skip ci]"
-          git push
+          if git diff --cached --quiet; then
+            echo "No badge changes."
+          else
+            git commit -m "chore: refresh repo stars/forks"
+            git push
+          fi
