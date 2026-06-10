@@ -26,7 +26,7 @@
       <h3><a href="https://github.com/brycewang-stanford/stata-code">stata-code</a></h3>
       <p>
         <a href="https://github.com/brycewang-stanford/stata-code"><img alt="stata-code stars" src="https://img.shields.io/badge/stars-8-8C1515?style=for-the-badge&logo=github"></a>
-        <a href="https://github.com/brycewang-stanford/stata-code/forks"><img alt="stata-code forks" src="https://img.shields.io/badge/forks-1-475569?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/brycewang-stanford/stata-code/forks"><img alt="stata-code forks" src="https://img.shields.io/badge/forks-2-475569?style=for-the-badge&logo=github"></a>
         <a href="https://pypi.org/project/stata-code/"><img alt="PyPI" src="https://img.shields.io/pypi/v/stata-code?style=for-the-badge&label=PyPI&color=0EA5E9"></a>
         <img alt="Focus project" src="https://img.shields.io/badge/focus-project-22C55E?style=for-the-badge">
       </p>
@@ -43,8 +43,8 @@
     <td width="50%" valign="top">
       <h3><a href="https://github.com/brycewang-stanford/StatsPAI">StatsPAI</a></h3>
       <p>
-        <a href="https://github.com/brycewang-stanford/StatsPAI"><img alt="StatsPAI stars" src="https://img.shields.io/badge/stars-224-0EA5E9?style=for-the-badge&logo=github"></a>
-        <a href="https://github.com/brycewang-stanford/StatsPAI/forks"><img alt="StatsPAI forks" src="https://img.shields.io/badge/forks-42-475569?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/brycewang-stanford/StatsPAI"><img alt="StatsPAI stars" src="https://img.shields.io/badge/stars-227-0EA5E9?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/brycewang-stanford/StatsPAI/forks"><img alt="StatsPAI forks" src="https://img.shields.io/badge/forks-43-475569?style=for-the-badge&logo=github"></a>
         <a href="https://pypi.org/project/statspai/"><img alt="PyPI" src="https://img.shields.io/pypi/v/statspai?style=for-the-badge&label=PyPI&color=22C55E"></a>
       </p>
       <p><strong>Agent-native Python platform for causal inference and applied econometrics.</strong></p>
@@ -59,7 +59,7 @@
       <h3><a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills">Auto Empirical Research Skills</a></h3>
       <p>
         <a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills"><img alt="Auto Empirical Research Skills stars" src="https://img.shields.io/badge/stars-1.8k-F59E0B?style=for-the-badge&logo=github"></a>
-        <a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/forks"><img alt="Auto Empirical Research Skills forks" src="https://img.shields.io/badge/forks-262-475569?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/forks"><img alt="Auto Empirical Research Skills forks" src="https://img.shields.io/badge/forks-266-475569?style=for-the-badge&logo=github"></a>
         <img alt="Skills" src="https://img.shields.io/badge/skills-23%2C000%2B-22C55E?style=for-the-badge">
       </p>
       <p><strong>Curated skill library for empirical research agents.</strong></p>
