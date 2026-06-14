@@ -58,8 +58,8 @@
     <td width="50%" valign="top">
       <h3><a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills">Auto Empirical Research Skills</a></h3>
       <p>
-        <a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills"><img alt="Auto Empirical Research Skills stars" src="https://img.shields.io/badge/stars-1.8k-F59E0B?style=for-the-badge&logo=github"></a>
-        <a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/forks"><img alt="Auto Empirical Research Skills forks" src="https://img.shields.io/badge/forks-273-475569?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills"><img alt="Auto Empirical Research Skills stars" src="https://img.shields.io/badge/stars-1.9k-F59E0B?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/forks"><img alt="Auto Empirical Research Skills forks" src="https://img.shields.io/badge/forks-275-475569?style=for-the-badge&logo=github"></a>
         <img alt="Skills" src="https://img.shields.io/badge/skills-23%2C000%2B-22C55E?style=for-the-badge">
       </p>
       <p><strong>Curated skill library for empirical research agents.</strong></p>
