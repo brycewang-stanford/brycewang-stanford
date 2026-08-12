@@ -43,7 +43,7 @@
     <td width="50%" valign="top">
       <h3><a href="https://github.com/brycewang-stanford/StatsPAI">StatsPAI</a></h3>
       <p>
-        <a href="https://github.com/brycewang-stanford/StatsPAI"><img alt="StatsPAI stars" src="https://img.shields.io/badge/stars-296-0EA5E9?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/brycewang-stanford/StatsPAI"><img alt="StatsPAI stars" src="https://img.shields.io/badge/stars-297-0EA5E9?style=for-the-badge&logo=github"></a>
         <a href="https://github.com/brycewang-stanford/StatsPAI/forks"><img alt="StatsPAI forks" src="https://img.shields.io/badge/forks-63-475569?style=for-the-badge&logo=github"></a>
         <a href="https://pypi.org/project/statspai/"><img alt="PyPI" src="https://img.shields.io/pypi/v/statspai?style=for-the-badge&label=PyPI&color=22C55E"></a>
       </p>
