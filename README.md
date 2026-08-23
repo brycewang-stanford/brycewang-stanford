@@ -25,7 +25,7 @@
     <td width="100%" colspan="2" valign="top">
       <h3><a href="https://github.com/brycewang-stanford/stata-code">stata-code</a></h3>
       <p>
-        <a href="https://github.com/brycewang-stanford/stata-code"><img alt="stata-code stars" src="https://img.shields.io/badge/stars-39-8C1515?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/brycewang-stanford/stata-code"><img alt="stata-code stars" src="https://img.shields.io/badge/stars-40-8C1515?style=for-the-badge&logo=github"></a>
         <a href="https://github.com/brycewang-stanford/stata-code/forks"><img alt="stata-code forks" src="https://img.shields.io/badge/forks-5-475569?style=for-the-badge&logo=github"></a>
         <a href="https://pypi.org/project/stata-code/"><img alt="PyPI" src="https://img.shields.io/pypi/v/stata-code?style=for-the-badge&label=PyPI&color=0EA5E9"></a>
         <img alt="Focus project" src="https://img.shields.io/badge/focus-project-22C55E?style=for-the-badge">
