@@ -448,7 +448,7 @@ def footer(theme, stats):
     score = f"{stats['total_stars']:05d}"
     style = f"""
     @keyframes walk{{0%{{transform:translateX(1050px)}}33.333%,100%{{transform:translateX(-150px)}}}}
-    @keyframes jump{{0%,6.67%{{transform:translateY(0);animation-timing-function:cubic-bezier(.2,.7,.4,1)}}20%{{transform:translateY(-58px);animation-timing-function:cubic-bezier(.6,0,.8,.3)}}33.33%,100%{{transform:translateY(0)}}}}
+    @keyframes jump{{0%,6.67%{{transform:translateY(0);animation-timing-function:cubic-bezier(.2,.7,.4,1)}}20%{{transform:translateY(-48px);animation-timing-function:cubic-bezier(.6,0,.8,.3)}}33.33%,100%{{transform:translateY(0)}}}}
     @keyframes scroll{{to{{transform:translateX(-1000px)}}}}
     @keyframes legA{{0%,49%{{opacity:1}}50%,100%{{opacity:0}}}}
     @keyframes legB{{0%,49%{{opacity:0}}50%,100%{{opacity:1}}}}
