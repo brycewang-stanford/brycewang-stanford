@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-labelledby="t d">
+<title id="t">Bryce Wang: agent-native infrastructure for empirical research</title>
+<desc id="d">A terminal runs a Callaway-Sant'Anna event study with StatsPAI and the resulting chart draws itself: flat pre-trends, then a negative effect after treatment.</desc>
+<style>
+    .cv{transform-box:fill-box;transform-origin:right center;transform:scaleX(0)}
+    @keyframes type{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+    @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+    @keyframes show{from{opacity:0}}
+    @keyframes draw{from{stroke-dashoffset:1}}
+    @keyframes pop{from{opacity:0;transform:scale(.3)}}
+    @keyframes rise{from{opacity:0;transform:translateY(8px)}}
+    @keyframes drift{from{transform:translateX(-60px)}to{transform:translateX(60px)}}
+    .cur{animation:show .01s 4.17s backwards,blink 1.1s steps(1) 4.17s infinite}
+    .name{animation:rise .7s ease-out .05s backwards}
+    .tag{animation:rise .7s ease-out .2s backwards}
+    .es{stroke-dasharray:1;animation:draw 1.2s ease-in-out 4.27s backwards}
+    .band{animation:show .9s ease-out 5.27s backwards}
+    .note{animation:show .8s ease-out 5.67s backwards}
+    .pt{transform-box:fill-box;transform-origin:center}
+    .glow{animation:drift 9s ease-in-out infinite alternate}
+    .cv0{animation:type 0.66s steps(30) 0.50s backwards}.cv1{animation:type 0.79s steps(36) 1.28s backwards}.cv2{animation:type 0.88s steps(40) 2.19s backwards}.cv3{animation:type 0.86s steps(39) 3.19s backwards}.pt0{animation:pop .35s ease-out 4.42s backwards}.pt1{animation:pop .35s ease-out 4.56s backwards}.pt2{animation:pop .35s ease-out 4.70s backwards}.pt3{animation:pop .35s ease-out 4.84s backwards}.pt4{animation:pop .35s ease-out 4.98s backwards}.pt5{animation:pop .35s ease-out 5.12s backwards}.pt6{animation:pop .35s ease-out 5.26s backwards}.pt7{animation:pop .35s ease-out 5.40s backwards}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<defs>
+  <linearGradient id="brand" x1="0" x2="1"><stop offset="0" stop-color="#0EA5E9"/><stop offset=".5" stop-color="#22C55E"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+  <radialGradient id="g1"><stop offset="0" stop-color="#0EA5E9" stop-opacity="0.2"/><stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/></radialGradient>
+  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#172235"/></pattern>
+  <clipPath id="clip"><rect x=".5" y=".5" width="999" height="399" rx="16"/></clipPath>
+</defs>
+<rect x=".5" y=".5" width="999" height="399" rx="16" fill="#0B1220" stroke="#1F2A3D"/>
+<g clip-path="url(#clip)">
+  <rect width="1000" height="400" fill="url(#dots)"/>
+  <ellipse class="glow" cx="770" cy="150" rx="330" ry="230" fill="url(#g1)"/>
+  <rect width="1000" height="4" fill="url(#brand)"/>
+</g>
+
+<text x="48" y="62" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" fill="#8B98A9" letter-spacing="1.5">DATA SCIENTIST, STANFORD REAP  /  FOUNDER, COPAPER.AI</text>
+<text class="name" x="46" y="128" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="62" font-weight="800" fill="#E6EDF3" letter-spacing="-1.5">Bryce Wang</text>
+<text class="tag" x="48" y="164" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#8B98A9">Agent-native infrastructure for <tspan fill="url(#brand)" font-weight="700">empirical research</tspan></text>
+
+<rect x="48" y="192" width="430" height="140" rx="10" fill="#070C16" stroke="#1F2A3D"/>
+<g font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13.5">
+<text x="66" y="233" textLength="246.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#3B4A60">&gt;&gt;&gt; </tspan><tspan fill="#E6EDF3">gt = sp.callaway_santanna(</tspan></text><rect class="cv cv0" x="66" y="218" width="250.0" height="21" fill="#070C16"/><text x="66" y="257" textLength="295.2" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#3B4A60">... </tspan><tspan fill="#E6EDF3">    data=mp, y=&quot;lemp&quot;, t=&quot;year&quot;,</tspan></text><rect class="cv cv1" x="66" y="242" width="299.2" height="21" fill="#070C16"/><text x="66" y="281" textLength="328.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#3B4A60">... </tspan><tspan fill="#E6EDF3">    i=&quot;countyreal&quot;, g=&quot;first_treat&quot;)</tspan></text><rect class="cv cv2" x="66" y="266" width="332.0" height="21" fill="#070C16"/><text x="66" y="305" textLength="319.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#3B4A60">&gt;&gt;&gt; </tspan><tspan fill="#E6EDF3">sp.aggte(gt, type=&quot;dynamic&quot;).plot()</tspan></text><rect class="cv cv3" x="66" y="290" width="323.8" height="21" fill="#070C16"/>
+<rect class="cur" x="388.8" y="291" width="8" height="17" fill="#0EA5E9"/>
+</g>
+<g transform="translate(48,352)"><rect width="103" height="26" rx="13" fill="#0F1A2E" stroke="#1F2A3D"/><circle cx="14" cy="13" r="3.5" fill="#F59E0B"/><text x="24" y="17.5" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8B98A9" textLength="73.0" lengthAdjust="spacingAndGlyphs">6.6k stars</text></g><g transform="translate(159.0,352)"><rect width="96" height="26" rx="13" fill="#0F1A2E" stroke="#1F2A3D"/><circle cx="14" cy="13" r="3.5" fill="#22C55E"/><text x="24" y="17.5" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8B98A9" textLength="65.7" lengthAdjust="spacingAndGlyphs">JOSS 2026</text></g><g transform="translate(262.7,352)"><rect width="125" height="26" rx="13" fill="#0F1A2E" stroke="#1F2A3D"/><circle cx="14" cy="13" r="3.5" fill="#E0626B"/><text x="24" y="17.5" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8B98A9" textLength="94.9" lengthAdjust="spacingAndGlyphs">Stanford REAP</text></g>
+
+<g font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" fill="#8B98A9">
+  <text x="590" y="62" font-size="13" fill="#E6EDF3" font-weight="600">ATT by event time</text>
+  <text x="948" y="62" text-anchor="end">95% CI</text>
+  <line x1="590" x2="948" y1="318.0" y2="318.0" stroke="#172235" stroke-width="1"/><text x="580" y="322.0" text-anchor="end">-0.08</text><line x1="590" x2="948" y1="244.0" y2="244.0" stroke="#172235" stroke-width="1"/><text x="580" y="248.0" text-anchor="end">-0.04</text><line x1="590" x2="948" y1="170.0" y2="170.0" stroke="#3B4A60" stroke-width="1"/><text x="580" y="174.0" text-anchor="end">0</text><line x1="590" x2="948" y1="96.0" y2="96.0" stroke="#172235" stroke-width="1"/><text x="580" y="100.0" text-anchor="end">+0.04</text>
+  <text x="614.0" y="338" text-anchor="middle">-4</text><text x="658.3" y="338" text-anchor="middle">-3</text><text x="702.6" y="338" text-anchor="middle">-2</text><text x="746.9" y="338" text-anchor="middle">-1</text><text x="791.1" y="338" text-anchor="middle">0</text><text x="835.4" y="338" text-anchor="middle">1</text><text x="879.7" y="338" text-anchor="middle">2</text><text x="924.0" y="338" text-anchor="middle">3</text>
+  <line x1="769.0" x2="769.0" y1="90" y2="318" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <text x="777.0" y="100" fill="#F59E0B">treatment</text>
+  <text class="note" x="948" y="374" text-anchor="end" fill="#3B4A60">real output: StatsPAI, Callaway-Sant'Anna on mpdta replica</text>
+</g>
+<polygon class="band" points="614.0,126.4 658.3,112.3 702.6,124.4 746.9,170.0 791.1,205.6 835.4,189.6 879.7,200.6 924.0,169.2 924.0,273.4 879.7,307.8 835.4,254.1 791.1,259.6 746.9,170.0 702.6,187.6 658.3,191.1 614.0,231.8" fill="#0EA5E9" opacity=".13"/>
+<path class="es" d="M614.0,179.1 L658.3,151.7 L702.6,156.0 L746.9,170.0 L791.1,232.6 L835.4,221.9 L879.7,254.2 L924.0,221.3" pathLength="1" fill="none" stroke="#0EA5E9" stroke-width="2" stroke-linejoin="round" opacity=".55"/>
+<g class="pt pt0"><line x1="614.0" x2="614.0" y1="126.4" y2="231.8" stroke="#7C8AA0" stroke-width="2" stroke-linecap="round"/><circle cx="614.0" cy="179.1" r="4.5" fill="#7C8AA0" stroke="#7C8AA0" stroke-width="2"/></g><g class="pt pt1"><line x1="658.3" x2="658.3" y1="112.3" y2="191.1" stroke="#7C8AA0" stroke-width="2" stroke-linecap="round"/><circle cx="658.3" cy="151.7" r="4.5" fill="#7C8AA0" stroke="#7C8AA0" stroke-width="2"/></g><g class="pt pt2"><line x1="702.6" x2="702.6" y1="124.4" y2="187.6" stroke="#7C8AA0" stroke-width="2" stroke-linecap="round"/><circle cx="702.6" cy="156.0" r="4.5" fill="#7C8AA0" stroke="#7C8AA0" stroke-width="2"/></g><g class="pt pt3"><circle cx="746.9" cy="170.0" r="4.5" fill="#0B1220" stroke="#7C8AA0" stroke-width="2"/></g><g class="pt pt4"><line x1="791.1" x2="791.1" y1="205.6" y2="259.6" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/><circle cx="791.1" cy="232.6" r="4.5" fill="#0EA5E9" stroke="#0EA5E9" stroke-width="2"/></g><g class="pt pt5"><line x1="835.4" x2="835.4" y1="189.6" y2="254.1" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/><circle cx="835.4" cy="221.9" r="4.5" fill="#0EA5E9" stroke="#0EA5E9" stroke-width="2"/></g><g class="pt pt6"><line x1="879.7" x2="879.7" y1="200.6" y2="307.8" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/><circle cx="879.7" cy="254.2" r="4.5" fill="#0EA5E9" stroke="#0EA5E9" stroke-width="2"/></g><g class="pt pt7"><line x1="924.0" x2="924.0" y1="169.2" y2="273.4" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/><circle cx="924.0" cy="221.3" r="4.5" fill="#0EA5E9" stroke="#0EA5E9" stroke-width="2"/></g>
+</svg>

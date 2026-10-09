@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 190" width="490" height="190" role="img" aria-label="Auto-Empirical-Research-Skills: 4.5k stars, 536 forks">
+<defs><linearGradient id="a" x1="0" x2="1"><stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#22C55E"/></linearGradient>
+<clipPath id="c"><rect x=".5" y=".5" width="489" height="189" rx="12"/></clipPath></defs>
+<rect x=".5" y=".5" width="489" height="189" rx="12" fill="#0B1220" stroke="#1F2A3D"/>
+<rect width="4" height="190" fill="url(#a)" clip-path="url(#c)"/>
+<text x="24" y="46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17.5" font-weight="700" fill="#E6EDF3">Auto-Empirical-Research-Skills</text>
+<rect x="356" y="28" width="114" height="24" rx="12" fill="#0F1A2E" stroke="#1F2A3D"/>
+<text x="413.1" y="44.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" fill="#F59E0B" textLength="93.8" lengthAdjust="spacingAndGlyphs">23,000+ skills</text>
+<text x="24" y="84" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8B98A9">A curated collection of agent skills for empirical</text><text x="24" y="104" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8B98A9">research across 8 social science disciplines.</text>
+<g font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" fill="#E6EDF3">
+  <path transform="translate(24,151)" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" fill="#F59E0B"/>
+  <text x="46" y="164" font-weight="600">4.5k</text>
+  <path transform="translate(104,151)" d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z" fill="#8B98A9"/>
+  <text x="126" y="164" fill="#8B98A9">536</text>
+  
+</g>
+</svg>

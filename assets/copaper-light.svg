@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 170" width="1000" height="170" role="img" aria-label="CoPaper.AI: from raw data to publishable manuscript">
+<style>
+    @keyframes run{0%{transform:translateX(0);opacity:0}6%{opacity:1}70%{transform:translateX(436px);opacity:1}76%,100%{transform:translateX(436px);opacity:0}}
+    @keyframes ping{0%,6%{stroke-width:2}3%{stroke-width:7}}
+    .dot{animation:run 6s linear infinite;opacity:0}
+    .n0{animation:ping 6s ease-out 0.00s infinite}.n1{animation:ping 6s ease-out 1.05s infinite}.n2{animation:ping 6s ease-out 2.10s infinite}.n3{animation:ping 6s ease-out 3.15s infinite}.n4{animation:ping 6s ease-out 4.20s infinite}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<defs><linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="#0EA5E9"/><stop offset="1" stop-color="#22C55E"/></linearGradient>
+<clipPath id="c"><rect x=".5" y=".5" width="999" height="169" rx="14"/></clipPath></defs>
+<rect x=".5" y=".5" width="999" height="169" rx="14" fill="#FFFFFF" stroke="#D8DEE6"/>
+<rect width="1000" height="4" fill="url(#b)" clip-path="url(#c)"/>
+<text x="40" y="52" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#57667A" letter-spacing="1.5">PRODUCT</text>
+<text x="40" y="92" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="32" font-weight="800" fill="#0F172A" letter-spacing="-.5">CoPaper.AI</text>
+<text x="40" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15.5" fill="#57667A">From raw data to publishable manuscript.</text>
+<text x="40" y="145" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#0EA5E9">copaper.ai</text>
+<line x1="500" x2="936" y1="78" y2="78" stroke="#B4BECB" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+<g font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12"><circle class="n n0" cx="500.0" cy="78" r="5" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="2"/><text x="500.0" y="108" text-anchor="middle" fill="#57667A">raw data</text><circle class="n n1" cx="609.0" cy="78" r="5" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="2"/><text x="609.0" y="60" text-anchor="middle" fill="#57667A">identification</text><circle class="n n2" cx="718.0" cy="78" r="5" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="2"/><text x="718.0" y="108" text-anchor="middle" fill="#57667A">estimation</text><circle class="n n3" cx="827.0" cy="78" r="5" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="2"/><text x="827.0" y="60" text-anchor="middle" fill="#57667A">robustness</text><circle class="n n4" cx="936.0" cy="78" r="7" fill="#22C55E" stroke="#22C55E" stroke-width="2"/><text x="936.0" y="108" text-anchor="middle" fill="#0F172A">manuscript</text></g>
+<circle class="dot" cx="500" cy="78" r="4" fill="#F59E0B"/>
+<text x="944" y="144" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#57667A">An AI research co-author for analysis, reproducibility and writing.</text>
+</svg>

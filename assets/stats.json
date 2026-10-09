@@ -1,0 +1,31 @@
+{
+  "repos": {
+    "AER-Skills": {
+      "forks": 10,
+      "stars": 54
+    },
+    "Auto-Empirical-Research-Skills": {
+      "forks": 536,
+      "stars": 4542
+    },
+    "Auto-Research-Skills": {
+      "forks": 15,
+      "stars": 196
+    },
+    "Awesome-Journal-Skills": {
+      "forks": 157,
+      "stars": 1226
+    },
+    "StatsPAI": {
+      "forks": 70,
+      "stars": 332,
+      "version": "1.39.2"
+    },
+    "stata-code": {
+      "forks": 5,
+      "stars": 49,
+      "version": "0.17.0"
+    }
+  },
+  "total_stars": 6565
+}

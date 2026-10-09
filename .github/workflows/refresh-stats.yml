@@ -1,4 +1,4 @@
-name: Refresh repo stats
+name: Refresh profile assets
 
 on:
   schedule:
@@ -15,19 +15,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Bake star/fork counts into README
+      - name: Render profile SVGs with live star/fork/PyPI numbers
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 .github/scripts/refresh_stats.py
+        run: python3 .github/scripts/build_profile.py
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add assets
           if git diff --cached --quiet; then
-            echo "No badge changes."
+            echo "No changes."
           else
-            git commit -m "chore: refresh repo stars/forks"
+            git commit -m "chore: refresh profile assets"
             git push
           fi
