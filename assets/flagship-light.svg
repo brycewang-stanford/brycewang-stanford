@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 170" width="1000" height="170" role="img" aria-label="StatsPAI: agent-native Python library for causal inference and applied econometrics, 337 stars, PyPI v1.39.5">
+<style>
+    @keyframes run{0%{transform:translateX(0);opacity:0}6%{opacity:1}70%{transform:translateX(436px);opacity:1}76%,100%{transform:translateX(436px);opacity:0}}
+    @keyframes ping{0%,6%{stroke-width:2}3%{stroke-width:7}}
+    .dot{animation:run 6s linear infinite;opacity:0}
+    .n0{animation:ping 6s ease-out 0.00s infinite}.n1{animation:ping 6s ease-out 1.05s infinite}.n2{animation:ping 6s ease-out 2.10s infinite}.n3{animation:ping 6s ease-out 3.15s infinite}.n4{animation:ping 6s ease-out 4.20s infinite}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<defs><linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="#0EA5E9"/><stop offset="1" stop-color="#22C55E"/></linearGradient>
+<clipPath id="c"><rect x=".5" y=".5" width="999" height="169" rx="14"/></clipPath></defs>
+<rect x=".5" y=".5" width="999" height="169" rx="14" fill="#FFFFFF" stroke="#D8DEE6"/>
+<rect width="1000" height="4" fill="url(#b)" clip-path="url(#c)"/>
+<text x="40" y="52" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#57667A" letter-spacing="1.5">FLAGSHIP  /  OPEN SOURCE  /  JOSS 2026</text>
+<text x="40" y="92" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="32" font-weight="800" fill="#0F172A" letter-spacing="-.5">StatsPAI</text>
+<text x="40" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15.5" fill="#57667A">Agent-native causal inference and econometrics in Python.</text>
+<g font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12.5">
+  <path transform="translate(40,133)" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" fill="#F59E0B"/>
+  <text x="62" y="146" font-weight="600" fill="#0F172A">337</text>
+  <path transform="translate(112,133)" d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z" fill="#57667A"/>
+  <text x="134" y="146" fill="#57667A">72</text>
+  <text x="182" y="146" fill="#0EA5E9">PyPI v1.39.5</text>
+</g>
+<line x1="500" x2="936" y1="78" y2="78" stroke="#B4BECB" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+<g font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12"><circle class="n n0" cx="500.0" cy="78" r="5" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="2"/><text x="500.0" y="108" text-anchor="middle" fill="#57667A">design</text><circle class="n n1" cx="609.0" cy="78" r="5" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="2"/><text x="609.0" y="60" text-anchor="middle" fill="#57667A">estimate</text><circle class="n n2" cx="718.0" cy="78" r="5" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="2"/><text x="718.0" y="108" text-anchor="middle" fill="#57667A">audit</text><circle class="n n3" cx="827.0" cy="78" r="5" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="2"/><text x="827.0" y="60" text-anchor="middle" fill="#57667A">sensitivity</text><circle class="n n4" cx="936.0" cy="78" r="7" fill="#22C55E" stroke="#22C55E" stroke-width="2"/><text x="936.0" y="108" text-anchor="middle" fill="#0F172A">tables</text></g>
+<circle class="dot" cx="500" cy="78" r="4" fill="#F59E0B"/>
+<text x="944" y="144" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#57667A">1,500+ registered functions, an MCP server, R/Stata parity validation.</text>
+</svg>

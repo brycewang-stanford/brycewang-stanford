@@ -58,6 +58,10 @@ PROJECTS = [
         "Skill stack for publishing in the AER: identification-first",
         "empirics, AEA-compliant replication, R&R rebuttals.",
     ]),
+    ("Paper-WorkFlow", "skills", None, "orchestrator", [
+        "End-to-end meta-orchestrator that turns a research idea",
+        "into a submission-ready empirical paper.",
+    ]),
 ]
 
 # Callaway-Sant'Anna dynamic ATT on StatsPAI's bundled mpdta replica (StatsPAI 1.39.2).
@@ -258,7 +262,7 @@ def hero(theme, stats):
   <rect width="{W}" height="4" fill="url(#brand)"/>
 </g>
 
-<text x="48" y="62" font-family="{MONO}" font-size="13" fill="{c["muted"]}" letter-spacing="1.5">DATA SCIENTIST, STANFORD REAP  /  FOUNDER, COPAPER.AI</text>
+<text x="48" y="62" font-family="{MONO}" font-size="13" fill="{c["muted"]}" letter-spacing="1.5">DATA SCIENTIST, STANFORD REAP  /  AUTHOR OF STATSPAI</text>
 <text class="name" x="46" y="128" font-family="{SANS}" font-size="62" font-weight="800" fill="{c["text"]}" letter-spacing="-1.5">Bryce Wang</text>
 <text class="tag" x="48" y="164" font-family="{SANS}" font-size="19" fill="{c["muted"]}">Agent-native infrastructure for <tspan fill="url(#brand)" font-weight="700">empirical research</tspan></text>
 
@@ -323,12 +327,12 @@ def card(theme, repo, kind, tag, desc, s):
 """
 
 
-# ---------------------------------------------------------------- product banner
+# ---------------------------------------------------------------- flagship banner
 
-def copaper(theme):
+def flagship(theme, s):
     c = THEMES[theme]
     W, H = 1000, 170
-    stages = ["raw data", "identification", "estimation", "robustness", "manuscript"]
+    stages = ["design", "estimate", "audit", "sensitivity", "tables"]
     X0, X1, Y = 500, 936, 78
     step = (X1 - X0) / (len(stages) - 1)
     nodes = []
@@ -348,20 +352,26 @@ def copaper(theme):
     .dot{{animation:run 6s linear infinite;opacity:0}}
     {pulses}
     {REDUCED_MOTION}"""
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="CoPaper.AI: from raw data to publishable manuscript">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="StatsPAI: agent-native Python library for causal inference and applied econometrics, {fmt(s['stars'])} stars, PyPI v{s['version']}">
 <style>{style}</style>
 <defs><linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="{SKY}"/><stop offset="1" stop-color="{GREEN}"/></linearGradient>
 <clipPath id="c"><rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14"/></clipPath></defs>
 <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="{c["panel"]}" stroke="{c["border"]}"/>
 <rect width="{W}" height="4" fill="url(#b)" clip-path="url(#c)"/>
-<text x="40" y="52" font-family="{MONO}" font-size="12" fill="{c["muted"]}" letter-spacing="1.5">PRODUCT</text>
-<text x="40" y="92" font-family="{SANS}" font-size="32" font-weight="800" fill="{c["text"]}" letter-spacing="-.5">CoPaper.AI</text>
-<text x="40" y="122" font-family="{SANS}" font-size="15.5" fill="{c["muted"]}">From raw data to publishable manuscript.</text>
-<text x="40" y="145" font-family="{MONO}" font-size="12" fill="{SKY}">copaper.ai</text>
+<text x="40" y="52" font-family="{MONO}" font-size="12" fill="{c["muted"]}" letter-spacing="1.5">FLAGSHIP  /  OPEN SOURCE  /  JOSS 2026</text>
+<text x="40" y="92" font-family="{SANS}" font-size="32" font-weight="800" fill="{c["text"]}" letter-spacing="-.5">StatsPAI</text>
+<text x="40" y="122" font-family="{SANS}" font-size="15.5" fill="{c["muted"]}">Agent-native causal inference and econometrics in Python.</text>
+<g font-family="{MONO}" font-size="12.5">
+  <path transform="translate(40,133)" d="{STAR}" fill="{AMBER}"/>
+  <text x="62" y="146" font-weight="600" fill="{c["text"]}">{fmt(s["stars"])}</text>
+  <path transform="translate(112,133)" d="{FORK}" fill="{c["muted"]}"/>
+  <text x="134" y="146" fill="{c["muted"]}">{fmt(s["forks"])}</text>
+  <text x="182" y="146" fill="{SKY}">PyPI v{s["version"]}</text>
+</g>
 <line x1="{X0}" x2="{X1}" y1="{Y}" y2="{Y}" stroke="{c["faint"]}" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
 <g font-family="{MONO}" font-size="12">{"".join(nodes)}</g>
 <circle class="dot" cx="{X0}" cy="{Y}" r="4" fill="{AMBER}"/>
-<text x="{X1 + 8}" y="{H - 26}" text-anchor="end" font-family="{SANS}" font-size="13" fill="{c["muted"]}">An AI research co-author for analysis, reproducibility and writing.</text>
+<text x="{X1 + 8}" y="{H - 26}" text-anchor="end" font-family="{SANS}" font-size="13" fill="{c["muted"]}">1,500+ registered functions, an MCP server, R/Stata parity validation.</text>
 </svg>
 """
 
@@ -501,9 +511,11 @@ def main():
 
     for theme in THEMES:
         write(f"hero-{theme}.svg", hero(theme, stats))
-        write(f"copaper-{theme}.svg", copaper(theme))
+        write(f"flagship-{theme}.svg", flagship(theme, stats["repos"]["StatsPAI"]))
         write(f"footer-{theme}.svg", footer(theme, stats))
         for repo, kind, pypi, tag, desc in PROJECTS:
+            if repo == "StatsPAI":  # shown as the flagship banner instead
+                continue
             s = dict(stats["repos"][repo])
             if pypi:
                 s["pypi"] = pypi

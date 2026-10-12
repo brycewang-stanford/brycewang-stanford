@@ -33,7 +33,7 @@
   <rect width="1000" height="4" fill="url(#brand)"/>
 </g>
 
-<text x="48" y="62" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" fill="#8B98A9" letter-spacing="1.5">DATA SCIENTIST, STANFORD REAP  /  FOUNDER, COPAPER.AI</text>
+<text x="48" y="62" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" fill="#8B98A9" letter-spacing="1.5">DATA SCIENTIST, STANFORD REAP  /  AUTHOR OF STATSPAI</text>
 <text class="name" x="46" y="128" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="62" font-weight="800" fill="#E6EDF3" letter-spacing="-1.5">Bryce Wang</text>
 <text class="tag" x="48" y="164" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#8B98A9">Agent-native infrastructure for <tspan fill="url(#brand)" font-weight="700">empirical research</tspan></text>
 

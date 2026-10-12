@@ -14,11 +14,15 @@
     },
     "Awesome-Journal-Skills": {
       "forks": 159,
-      "stars": 1246
+      "stars": 1247
+    },
+    "Paper-WorkFlow": {
+      "forks": 5,
+      "stars": 41
     },
     "StatsPAI": {
-      "forks": 71,
-      "stars": 336,
+      "forks": 72,
+      "stars": 337,
       "version": "1.39.5"
     },
     "stata-code": {
@@ -27,5 +31,5 @@
       "version": "0.17.0"
     }
   },
-  "total_stars": 6644
+  "total_stars": 6646
 }
