@@ -2,27 +2,27 @@
   "repos": {
     "AER-Skills": {
       "forks": 10,
-      "stars": 54
+      "stars": 55
     },
     "Auto-Empirical-Research-Skills": {
       "forks": 550,
-      "stars": 4636
+      "stars": 4645
     },
     "Auto-Research-Skills": {
       "forks": 17,
-      "stars": 206
+      "stars": 208
     },
     "Awesome-Journal-Skills": {
-      "forks": 162,
-      "stars": 1257
+      "forks": 161,
+      "stars": 1262
     },
     "Paper-WorkFlow": {
       "forks": 5,
       "stars": 42
     },
     "StatsPAI": {
-      "forks": 72,
-      "stars": 340,
+      "forks": 71,
+      "stars": 339,
       "version": "1.39.6"
     },
     "stata-code": {
@@ -31,5 +31,5 @@
       "version": "0.17.0"
     }
   },
-  "total_stars": 6714
+  "total_stars": 6734
 }
