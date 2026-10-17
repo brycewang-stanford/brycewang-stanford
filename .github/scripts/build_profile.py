@@ -77,20 +77,25 @@ EVENT_STUDY = [
     (3, -0.027734, -0.055891, 0.000424),
 ]
 
-SKY, GREEN, AMBER, CARDINAL = "#0EA5E9", "#22C55E", "#F59E0B", "#8C1515"
-
+# Palette taken from the StatsPAI logo (Neon Glow, logo-2026): magenta -> violet -> cyan
+# on deep indigo. Light mode uses the logo's print accents, dark mode its neon ones.
 THEMES = {
     "dark": dict(
-        panel="#0B1220", panel2="#0F1A2E", border="#1F2A3D", text="#E6EDF3",
-        muted="#8B98A9", faint="#3B4A60", grid="#172235", term="#070C16",
-        pre="#7C8AA0", ground="#56657A", dino="#C9D4E2",
+        panel="#110B36", panel2="#1A1349", border="#2C2468", text="#F3F0FF",
+        muted="#A7A1D4", faint="#554D94", grid="#1C1650", term="#0B0727",
+        pre="#8F88C4", ground="#5F579A", dino="#D9D3FF",
+        mag="#FF4FD8", vio="#9D6BFF", cyan="#2EDBFF",
     ),
     "light": dict(
-        panel="#FFFFFF", panel2="#F6F8FB", border="#D8DEE6", text="#0F172A",
-        muted="#57667A", faint="#B4BECB", grid="#EDF1F6", term="#F3F6FA",
-        pre="#8291A5", ground="#9AA7B7", dino="#475569",
+        panel="#FFFFFF", panel2="#F7F4FF", border="#E3DCF7", text="#1A1050",
+        muted="#5C5785", faint="#B3ABD6", grid="#F0ECFB", term="#F8F6FF",
+        pre="#9690BF", ground="#A79FCC", dino="#1A1050",
+        mag="#D62FC0", vio="#7C3AED", cyan="#0AA5D8",
     ),
 }
+
+LOGO = os.path.join(ASSETS, "brand", "statspai-logo.svg")
+LOGO_NAVY = "rgb(10.196078%, 6.27451%, 31.372549%)"  # the "Stats" half of the wordmark
 
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
 MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
@@ -196,7 +201,7 @@ def hero(theme, stats):
 
     marks = []
     for i, (e, a, l, u) in enumerate(EVENT_STUDY):
-        col = c["pre"] if e < 0 else SKY
+        col = c["pre"] if e < 0 else c["cyan"]
         x = px(e)
         whisk = "" if e == -1 else (
             f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{py(u):.1f}" y2="{py(l):.1f}" stroke="{col}" stroke-width="2" '
@@ -210,9 +215,9 @@ def hero(theme, stats):
         css.append(f".pt{i}{{animation:pop .35s ease-out {typed + 0.25 + i * 0.14:.2f}s backwards}}")
 
     chips = [
-        (f"{fmt(stats['total_stars'])} stars", AMBER),
-        ("JOSS 2026", GREEN),
-        ("Stanford REAP", CARDINAL if theme == "light" else "#E0626B"),
+        (f"{fmt(stats['total_stars'])} stars", c["mag"]),
+        ("JOSS 2026", c["vio"]),
+        ("Stanford REAP", c["cyan"]),
     ]
     chip_svg, cx = [], 48
     for label, col in chips:
@@ -250,15 +255,17 @@ def hero(theme, stats):
 <desc id="d">A terminal runs a Callaway-Sant'Anna event study with StatsPAI and the resulting chart draws itself: flat pre-trends, then a negative effect after treatment.</desc>
 <style>{style}</style>
 <defs>
-  <linearGradient id="brand" x1="0" x2="1"><stop offset="0" stop-color="{SKY}"/><stop offset=".5" stop-color="{GREEN}"/><stop offset="1" stop-color="{AMBER}"/></linearGradient>
-  <radialGradient id="g1"><stop offset="0" stop-color="{SKY}" stop-opacity="{.20 if theme == "dark" else .12}"/><stop offset="1" stop-color="{SKY}" stop-opacity="0"/></radialGradient>
+  <linearGradient id="brand" x1="0" x2="1"><stop offset="0" stop-color="{c["mag"]}"/><stop offset=".5" stop-color="{c["vio"]}"/><stop offset="1" stop-color="{c["cyan"]}"/></linearGradient>
+  <radialGradient id="g1"><stop offset="0" stop-color="{c["mag"]}" stop-opacity="{.26 if theme == "dark" else .10}"/><stop offset="1" stop-color="{c["mag"]}" stop-opacity="0"/></radialGradient>
+  <radialGradient id="g2"><stop offset="0" stop-color="{c["cyan"]}" stop-opacity="{.22 if theme == "dark" else .10}"/><stop offset="1" stop-color="{c["cyan"]}" stop-opacity="0"/></radialGradient>
   <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="{c["grid"]}"/></pattern>
   <clipPath id="clip"><rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="16"/></clipPath>
 </defs>
 <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="16" fill="{c["panel"]}" stroke="{c["border"]}"/>
 <g clip-path="url(#clip)">
   <rect width="{W}" height="{H}" fill="url(#dots)"/>
-  <ellipse class="glow" cx="770" cy="150" rx="330" ry="230" fill="url(#g1)"/>
+  <ellipse cx="60" cy="20" rx="420" ry="260" fill="url(#g1)"/>
+  <ellipse class="glow" cx="900" cy="380" rx="420" ry="280" fill="url(#g2)"/>
   <rect width="{W}" height="4" fill="url(#brand)"/>
 </g>
 
@@ -269,7 +276,7 @@ def hero(theme, stats):
 <rect x="48" y="192" width="430" height="140" rx="10" fill="{c["term"]}" stroke="{c["border"]}"/>
 <g font-family="{MONO}" font-size="13.5">
 {"".join(term)}
-<rect class="cur" x="{cur_x:.1f}" y="{cur_y}" width="8" height="17" fill="{SKY}"/>
+<rect class="cur" x="{cur_x:.1f}" y="{cur_y}" width="8" height="17" fill="{c["mag"]}"/>
 </g>
 {"".join(chip_svg)}
 
@@ -278,12 +285,12 @@ def hero(theme, stats):
   <text x="{X1}" y="62" text-anchor="end">95% CI</text>
   {"".join(grid)}
   {ticks}
-  <line x1="{tx:.1f}" x2="{tx:.1f}" y1="{Y0 - 6}" y2="{Y1}" stroke="{AMBER}" stroke-width="1.5" stroke-dasharray="4 5"/>
-  <text x="{tx + 8:.1f}" y="{Y0 + 4}" fill="{AMBER}">treatment</text>
+  <line x1="{tx:.1f}" x2="{tx:.1f}" y1="{Y0 - 6}" y2="{Y1}" stroke="{c["mag"]}" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <text x="{tx + 8:.1f}" y="{Y0 + 4}" fill="{c["mag"]}">treatment</text>
   <text class="note" x="{X1}" y="{H - 26}" text-anchor="end" fill="{c["faint"]}">real output: StatsPAI, Callaway-Sant'Anna on mpdta replica</text>
 </g>
-<polygon class="band" points="{band}" fill="{SKY}" opacity=".13"/>
-<path class="es" d="{path}" pathLength="1" fill="none" stroke="{SKY}" stroke-width="2" stroke-linejoin="round" opacity=".55"/>
+<polygon class="band" points="{band}" fill="{c["vio"]}" opacity=".16"/>
+<path class="es" d="{path}" pathLength="1" fill="none" stroke="{c["cyan"]}" stroke-width="2" stroke-linejoin="round" opacity=".6"/>
 {"".join(marks)}
 </svg>
 """
@@ -294,7 +301,7 @@ def hero(theme, stats):
 def card(theme, repo, kind, tag, desc, s):
     c = THEMES[theme]
     W, H = 490, 190
-    accent = SKY if kind == "tool" else AMBER
+    accent, accent2 = (c["cyan"], c["vio"]) if kind == "tool" else (c["mag"], c["vio"])
     right = f"PyPI v{s['version']}" if "version" in s else tag
     rw = len(right) * 6.7 + 20
     name_size = 20 if len(repo) <= 24 else 17.5
@@ -308,7 +315,7 @@ def card(theme, repo, kind, tag, desc, s):
         if "pypi" in s else ""
     )
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{escape(repo)}: {stars} stars, {forks} forks">
-<defs><linearGradient id="a" x1="0" x2="1"><stop offset="0" stop-color="{accent}"/><stop offset="1" stop-color="{GREEN}"/></linearGradient>
+<defs><linearGradient id="a" x1="0" x2="1"><stop offset="0" stop-color="{accent}"/><stop offset="1" stop-color="{accent2}"/></linearGradient>
 <clipPath id="c"><rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="12"/></clipPath></defs>
 <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="12" fill="{c["panel"]}" stroke="{c["border"]}"/>
 <rect width="4" height="{H}" fill="url(#a)" clip-path="url(#c)"/>
@@ -317,7 +324,7 @@ def card(theme, repo, kind, tag, desc, s):
 <text x="{W - 20 - rw / 2:.1f}" y="44.5" text-anchor="middle" font-family="{MONO}" font-size="11.5" fill="{accent}" textLength="{len(right) * 6.7:.1f}" lengthAdjust="spacingAndGlyphs">{escape(right)}</text>
 {body}
 <g font-family="{MONO}" font-size="13" fill="{c["text"]}">
-  <path transform="translate(24,{H - 39})" d="{STAR}" fill="{AMBER}"/>
+  <path transform="translate(24,{H - 39})" d="{STAR}" fill="{c["mag"]}"/>
   <text x="46" y="{H - 26}" font-weight="600">{stars}</text>
   <path transform="translate(104,{H - 39})" d="{FORK}" fill="{c["muted"]}"/>
   <text x="126" y="{H - 26}" fill="{c["muted"]}">{forks}</text>
@@ -329,19 +336,31 @@ def card(theme, repo, kind, tag, desc, s):
 
 # ---------------------------------------------------------------- flagship banner
 
+def logo(theme, x, y, height):
+    """The official StatsPAI logo (icon + outlined wordmark), nested at (x, y)."""
+    with open(LOGO, encoding="utf-8") as f:
+        src = f.read()
+    assert src.count(LOGO_NAVY) == 1, "logo wordmark colour changed; update LOGO_NAVY"
+    if theme == "dark":
+        src = src.replace(LOGO_NAVY, THEMES["dark"]["text"])
+    inner = src[src.index(">", src.index("<svg")) + 1:src.rindex("</svg>")]
+    return (f'<svg x="{x}" y="{y}" width="{height * 4.2:.1f}" height="{height}" viewBox="0 0 420 100" '
+            f'overflow="visible">{inner}</svg>')
+
+
 def flagship(theme, s):
     c = THEMES[theme]
-    W, H = 1000, 170
+    W, H = 1000, 196
     stages = ["design", "estimate", "audit", "sensitivity", "tables"]
-    X0, X1, Y = 500, 936, 78
+    X0, X1, Y = 520, 940, 96
     step = (X1 - X0) / (len(stages) - 1)
     nodes = []
     for i, label in enumerate(stages):
         x = X0 + i * step
         last = i == len(stages) - 1
         nodes.append(
-            f'<circle class="n n{i}" cx="{x:.1f}" cy="{Y}" r="{7 if last else 5}" fill="{GREEN if last else c["panel"]}" '
-            f'stroke="{GREEN if last else SKY}" stroke-width="2"/>'
+            f'<circle class="n n{i}" cx="{x:.1f}" cy="{Y}" r="{7 if last else 5}" fill="{c["cyan"] if last else c["panel"]}" '
+            f'stroke="{c["cyan"] if last else c["vio"]}" stroke-width="2"/>'
             f'<text x="{x:.1f}" y="{Y + (30 if i % 2 == 0 else -18)}" text-anchor="middle" '
             f'fill="{c["text"] if last else c["muted"]}">{label}</text>'
         )
@@ -354,24 +373,30 @@ def flagship(theme, s):
     {REDUCED_MOTION}"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="StatsPAI: agent-native Python library for causal inference and applied econometrics, {fmt(s['stars'])} stars, PyPI v{s['version']}">
 <style>{style}</style>
-<defs><linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="{SKY}"/><stop offset="1" stop-color="{GREEN}"/></linearGradient>
+<defs><linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="{c["mag"]}"/><stop offset=".5" stop-color="{c["vio"]}"/><stop offset="1" stop-color="{c["cyan"]}"/></linearGradient>
+<radialGradient id="gm"><stop offset="0" stop-color="{c["mag"]}" stop-opacity="{.24 if theme == "dark" else .08}"/><stop offset="1" stop-color="{c["mag"]}" stop-opacity="0"/></radialGradient>
+<radialGradient id="gc"><stop offset="0" stop-color="{c["cyan"]}" stop-opacity="{.20 if theme == "dark" else .08}"/><stop offset="1" stop-color="{c["cyan"]}" stop-opacity="0"/></radialGradient>
 <clipPath id="c"><rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14"/></clipPath></defs>
 <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="{c["panel"]}" stroke="{c["border"]}"/>
-<rect width="{W}" height="4" fill="url(#b)" clip-path="url(#c)"/>
-<text x="40" y="52" font-family="{MONO}" font-size="12" fill="{c["muted"]}" letter-spacing="1.5">FLAGSHIP  /  OPEN SOURCE  /  JOSS 2026</text>
-<text x="40" y="92" font-family="{SANS}" font-size="32" font-weight="800" fill="{c["text"]}" letter-spacing="-.5">StatsPAI</text>
-<text x="40" y="122" font-family="{SANS}" font-size="15.5" fill="{c["muted"]}">Agent-native causal inference and econometrics in Python.</text>
+<g clip-path="url(#c)">
+  <ellipse cx="40" cy="0" rx="380" ry="200" fill="url(#gm)"/>
+  <ellipse cx="980" cy="{H}" rx="380" ry="200" fill="url(#gc)"/>
+  <rect width="{W}" height="4" fill="url(#b)"/>
+</g>
+<text x="40" y="40" font-family="{MONO}" font-size="12" fill="{c["muted"]}" letter-spacing="1.5">FLAGSHIP  /  OPEN SOURCE  /  JOSS 2026</text>
+{logo(theme, 30, 46, 72)}
+<text x="40" y="146" font-family="{SANS}" font-size="15.5" fill="{c["muted"]}">Agent-native causal inference and econometrics in Python.</text>
 <g font-family="{MONO}" font-size="12.5">
-  <path transform="translate(40,133)" d="{STAR}" fill="{AMBER}"/>
-  <text x="62" y="146" font-weight="600" fill="{c["text"]}">{fmt(s["stars"])}</text>
-  <path transform="translate(112,133)" d="{FORK}" fill="{c["muted"]}"/>
-  <text x="134" y="146" fill="{c["muted"]}">{fmt(s["forks"])}</text>
-  <text x="182" y="146" fill="{SKY}">PyPI v{s["version"]}</text>
+  <path transform="translate(40,159)" d="{STAR}" fill="{c["mag"]}"/>
+  <text x="62" y="172" font-weight="600" fill="{c["text"]}">{fmt(s["stars"])}</text>
+  <path transform="translate(112,159)" d="{FORK}" fill="{c["muted"]}"/>
+  <text x="134" y="172" fill="{c["muted"]}">{fmt(s["forks"])}</text>
+  <text x="182" y="172" fill="{c["cyan"]}">PyPI v{s["version"]}</text>
 </g>
 <line x1="{X0}" x2="{X1}" y1="{Y}" y2="{Y}" stroke="{c["faint"]}" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
 <g font-family="{MONO}" font-size="12">{"".join(nodes)}</g>
-<circle class="dot" cx="{X0}" cy="{Y}" r="4" fill="{AMBER}"/>
-<text x="{X1 + 8}" y="{H - 26}" text-anchor="end" font-family="{SANS}" font-size="13" fill="{c["muted"]}">1,500+ registered functions, an MCP server, R/Stata parity validation.</text>
+<circle class="dot" cx="{X0}" cy="{Y}" r="4" fill="{c["mag"]}"/>
+<text x="{X1 + 8}" y="{H - 24}" text-anchor="end" font-family="{SANS}" font-size="13" fill="{c["muted"]}">1,500+ registered functions, an MCP server, R/Stata parity validation.</text>
 </svg>
 """
 
