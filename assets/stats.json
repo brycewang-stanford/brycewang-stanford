@@ -6,7 +6,7 @@
     },
     "Auto-Empirical-Research-Skills": {
       "forks": 589,
-      "stars": 5167
+      "stars": 5179
     },
     "Auto-Research-Skills": {
       "forks": 20,
@@ -14,15 +14,15 @@
     },
     "Awesome-Journal-Skills": {
       "forks": 178,
-      "stars": 1460
+      "stars": 1465
     },
     "Paper-WorkFlow": {
       "forks": 6,
-      "stars": 50
+      "stars": 51
     },
     "StatsPAI": {
-      "forks": 77,
-      "stars": 385,
+      "forks": 78,
+      "stars": 387,
       "version": "1.46.6"
     },
     "stata-code": {
@@ -31,5 +31,5 @@
       "version": "0.19.0"
     }
   },
-  "total_stars": 7662
+  "total_stars": 7685
 }
